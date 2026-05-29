@@ -1,0 +1,425 @@
+@import "tailwindcss";
+
+/* ============================================================
+   FIGMA DESIGN TOKENS → TAILWIND CSS v4 @theme VARIABLES
+   Source: TOL-Tailwind-v2 (Figma)
+   ============================================================ */
+
+@theme {
+  /* ──────────────────────────────────────────────────────────
+     FONTS
+     ────────────────────────────────────────────────────────── */
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Inter Tight", serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* ──────────────────────────────────────────────────────────
+     COLORS — Content
+     ────────────────────────────────────────────────────────── */
+  --color-content-primary: #000000f2;
+  --color-content-subtle: #000000cc;
+  --color-content-faint: #00000066;
+  --color-content-muted: #ffffff99;
+  --color-content-inverse-primary: #fffffff2;
+  --color-content-inverse-subtle: #ffffffcc;
+  --color-content-inverse-faint: #ffffff66;
+  --color-content-inverse-muted: #ffffff99;
+  --color-content-inverse-disabled: #ffffff33;
+
+  /* COLORS — Brand */
+  --color-brand-primary: #10b880;
+
+  /* COLORS — Signal */
+  --color-signal-error: #cb0707;
+  --color-state-error: #e35e5e;
+
+  /* COLORS — Surface */
+  --color-surface-base: #ffffff;
+  --color-surface-level-1: #f9fafa;
+  --color-surface-level-2: #eeeff1;
+  --color-surface-level-3: #d8dade;
+  --color-surface-opacity-5: #fffffff2;
+  --color-surface-inverse-base: #050506;
+  --color-surface-inverse-level-1: #0d0d0f;
+  --color-surface-inverse-level-2: #202226;
+
+  /* COLORS — Background */
+  --color-bg-neutral-strong: #000000f2;
+  --color-bg-inverse-subtle: #ffffff26;
+  --color-bg-inverse-strong: #fffffff2;
+  --color-bg-brand-subtle: #0a1d16;
+
+  /* COLORS — Border */
+  --color-border-weak: #0000001a;
+  --color-border-medium: #00000033;
+  --color-border-strong: #ffffff66;
+  --color-border-very-strong: #000000cc;
+  --color-border-inverse-weak: #ffffff1a;
+  --color-border-inverse-strong: #ffffff66;
+  --color-border-inverse-very-strong: #ffffffcc;
+  --color-border-brand: #379b75;
+  --color-border-brand-on-strong: #ffffff;
+  --color-border-error: #cb0707;
+
+  /* COLORS — Overlay */
+  --color-overlay-medium: #00000066;
+  --color-overlay-weak: #0000001a;
+
+  /* COLORS — Contextual (light surface) */
+  --color-content-muted-light: #00000099;
+  --color-border-strong-light: #00000066;
+
+  /* COLORS — Data / Charts */
+  --color-data-warning: #ffc40c;
+  --color-data-negative: #cb0707;
+  --color-data-heatmap-subtle: #e8f7f1;
+  --color-data-heatmap-medium: #287155;
+
+  /* ──────────────────────────────────────────────────────────
+     TYPOGRAPHY — Font Sizes (--text-*)
+     Tailwind v4: --text-{name} = {font-size} generates text-{name}
+     ────────────────────────────────────────────────────────── */
+
+  /* Display */
+  --text-display-3xl: 6.6875rem;
+  /* 107px */
+  --text-display-2xl: 5.25rem;
+  /* 84px */
+  --text-display-xl: 4.25rem;
+  /* 68px */
+  --text-display-sm: 5rem;
+  /* 80px – Typography/size/4xl */
+  --text-display-lg: 3.375rem;
+  /* 54px */
+  --text-display-md: 2.75rem;
+  /* 44px */
+  --text-display-xs: 1.75rem;
+  /* 28px */
+
+  /* Headings */
+  --text-heading-1: 4.25rem;
+  /* 68px */
+  --text-heading-2: 2.75rem;
+  /* 44px */
+  --text-heading-3: 2.1875rem;
+  /* 35px */
+
+  /* Body */
+  --text-body-xl: 1.75rem;
+  /* 28px */
+  --text-body-lg: 1.375rem;
+  /* 22px */
+  --text-body-md: 1.125rem;
+  /* 18px */
+  --text-body-sm: 1rem;
+  /* 16px */
+
+  /* UI Labels */
+  --text-label-xl: 1.375rem;
+  /* 22px */
+  --text-label-lg: 1.125rem;
+  /* 18px */
+  --text-label-large: 1rem;
+  /* 16px */
+  --text-label-base: 1rem;
+  /* 16px */
+  --text-label-sm: 0.875rem;
+  /* 14px */
+
+  /* Code */
+  --text-code-lg: 1.375rem;
+  /* 22px */
+  --text-code-base: 1rem;
+  /* 16px */
+
+  /* ──────────────────────────────────────────────────────────
+     TYPOGRAPHY — Line Heights (--leading-*)
+     ────────────────────────────────────────────────────────── */
+  --leading-display-3xl: 6.875rem;
+  /* 110px */
+  --leading-display-2xl: 5.625rem;
+  /* 90px */
+  --leading-display-xl: 4.5rem;
+  /* 72px */
+  --leading-display-sm: 5.5rem;
+  /* 88px */
+  --leading-display-lg: 4rem;
+  /* 64px */
+  --leading-display-md: 3.625rem;
+  /* 58px */
+  --leading-display-xs: 2.25rem;
+  /* 36px */
+
+  --leading-heading-1: 4.5rem;
+  /* 72px */
+  --leading-heading-2: 3.625rem;
+  /* 58px */
+  --leading-heading-3: 2.875rem;
+  /* 46px */
+
+  --leading-body-xl: 2.25rem;
+  /* 36px */
+  --leading-body-lg: 2rem;
+  /* 32px */
+  --leading-body-md: 1.6875rem;
+  /* 27px */
+  --leading-body-sm: 1.25rem;
+  /* 20px */
+
+  --leading-label-xl: 2rem;
+  /* 32px */
+  --leading-label-lg: 1.6875rem;
+  /* 27px */
+  --leading-label-large: 1.5rem;
+  /* 24px */
+  --leading-label-base: 1.25rem;
+  /* 20px */
+  --leading-label-sm: 1.125rem;
+  /* 18px */
+
+  --leading-code-lg: 2rem;
+  /* 32px */
+  --leading-code-base: 1.25rem;
+  /* 20px */
+
+  /* ──────────────────────────────────────────────────────────
+     TYPOGRAPHY — Letter Spacing (--tracking-*)
+     ────────────────────────────────────────────────────────── */
+  --tracking-display: -0.03125rem;
+  /* -0.5px */
+  --tracking-normal: 0em;
+
+  /* ──────────────────────────────────────────────────────────
+     TYPOGRAPHY — Font Weights (--font-weight-*)
+     ────────────────────────────────────────────────────────── */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* ──────────────────────────────────────────────────────────
+     SPACING — Margin / Padding scale (px → rem)
+     ────────────────────────────────────────────────────────── */
+  --spacing-0: 0rem;
+  --spacing-0-5: 0.125rem;
+  /* 2px */
+  --spacing-1: 0.25rem;
+  /* 4px */
+  --spacing-1-5: 0.375rem;
+  /* 6px */
+  --spacing-2: 0.5rem;
+  /* 8px */
+  --spacing-2-5: 0.625rem;
+  /* 10px */
+  --spacing-3: 0.75rem;
+  /* 12px */
+  --spacing-3-5: 0.875rem;
+  /* 14px */
+  --spacing-4: 1rem;
+  /* 16px */
+  --spacing-5: 1.25rem;
+  /* 20px */
+  --spacing-6: 1.5rem;
+  /* 24px */
+  --spacing-8: 2rem;
+  /* 32px */
+  --spacing-10: 2.5rem;
+  /* 40px */
+  --spacing-12: 3rem;
+  /* 48px */
+  --spacing-16: 4rem;
+  /* 64px */
+  --spacing-24: 6rem;
+  /* 96px */
+  --spacing-32: 8rem;
+  /* 128px */
+
+  /* ──────────────────────────────────────────────────────────
+     BORDER RADIUS
+     ────────────────────────────────────────────────────────── */
+  --radius-none: 0rem;
+  --radius-default: 0.25rem;
+  /* 4px */
+  --radius-md: 0.375rem;
+  /* 6px */
+  --radius-lg: 0.5rem;
+  /* 8px */
+  --radius-xl: 0.75rem;
+  /* 12px */
+  --radius-2xl: 1rem;
+  /* 16px */
+  --radius-3xl: 1.5rem;
+  /* 24px */
+  --radius-full: 15rem;
+  /* 240px */
+
+  /* ──────────────────────────────────────────────────────────
+     BORDER WIDTH
+     ────────────────────────────────────────────────────────── */
+  --border-width-none: 0px;
+  --border-width-extra-thin: 0.5px;
+  --border-width-thin: 1px;
+  --border-width-medium: 2px;
+
+  /* ──────────────────────────────────────────────────────────
+     BREAKPOINTS
+     ────────────────────────────────────────────────────────── */
+  --breakpoint-max: 94.5rem;
+  /* 1512px */
+
+  /* ──────────────────────────────────────────────────────────
+     SHADOWS
+     ────────────────────────────────────────────────────────── */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-base: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+  /* ──────────────────────────────────────────────────────────
+     BLUR (Effects)
+     ────────────────────────────────────────────────────────── */
+  --blur-md: 4px;
+}
+
+/* ============================================================
+   BACKWARD-COMPATIBLE ALIASES
+   Keeps old var(--color-*) references working in existing components
+   ============================================================ */
+:root {
+  --background: var(--color-surface-base);
+  --foreground: var(--color-content-primary);
+
+  /* Legacy color aliases */
+  --color-primary: var(--color-content-primary);
+  --color-default: var(--color-content-primary);
+  --color-error: var(--color-signal-error);
+  --color-strong: var(--color-content-inverse-subtle);
+  --color-inverse-primary: var(--color-content-inverse-primary);
+  --color-inverse-subtle: var(--color-content-inverse-subtle);
+  --color-muted: var(--color-content-muted);
+  --color-subtle: var(--color-content-subtle);
+  --color-faint: var(--color-content-faint);
+  --color-base: var(--color-surface-base);
+  --color-weak: var(--color-border-weak);
+  --color-hover: var(--color-border-weak);
+  --color-level-1: var(--color-surface-level-1);
+  --color-level-3: var(--color-bg-neutral-strong);
+  --color-on-strong: var(--color-border-brand-on-strong);
+  --color-neutral-900: #303132;
+  --color-text-main-900: #101424;
+
+  /* Legacy font aliases */
+  --font-family-sans: var(--font-sans);
+  --font-family-serif: var(--font-display);
+  --font-family-mono: var(--font-mono);
+  --font-weight-normal: var(--font-weight-regular);
+
+  /* Responsive tokens (from Figma) */
+  --responsive-padding-p-sm: 2rem;
+  /* 32px */
+  --responsive-padding-p-md: 4rem;
+  /* 64px */
+  --responsive-padding-p-lg: 8rem;
+  /* 128px */
+  --responsive-margin-m-xs: 2rem;
+  /* 32px */
+  --responsive-margin-m-sm: 2rem;
+  /* 32px */
+  --responsive-margin-m-md: 4rem;
+  /* 64px */
+  --responsive-margin-m-lg: 8rem;
+  /* 128px */
+  --responsive-border-radius-r-sm: 1.5rem;
+  /* 24px */
+  --responsive-border-radius-r-md: 2rem;
+  /* 32px */
+}
+
+/* ============================================================
+   DARK MODE
+   ============================================================ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--color-surface-inverse-base);
+    --foreground: var(--color-content-inverse-primary);
+
+    /* Dark mode surface overrides */
+    --color-base: var(--color-surface-inverse-base);
+    --color-level-1: var(--color-surface-inverse-level-1);
+    --color-level-3: var(--color-content-inverse-primary);
+    --color-subtle: var(--color-content-subtle);
+    --color-strong: var(--color-content-inverse-subtle);
+  }
+}
+
+/* ============================================================
+   RESPONSIVE OVERRIDES
+   ============================================================ */
+@media (max-width: 767px) {
+  :root {
+    /* Mobile responsive tokens */
+    --responsive-padding-p-lg: 4rem;
+    /* 64px */
+    --responsive-padding-p-md: 3rem;
+    /* 48px */
+    --responsive-margin-m-sm: 2rem;
+    /* 32px */
+    --responsive-margin-m-md: 3rem;
+    /* 48px */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  :root {
+    /* Tablet responsive tokens */
+    --responsive-padding-p-lg: 6rem;
+    /* 96px */
+    --responsive-padding-p-md: 4rem;
+    /* 64px */
+    --responsive-margin-m-sm: 2rem;
+    /* 32px */
+    --responsive-margin-m-md: 4rem;
+    /* 64px */
+  }
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: inherit;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.7s ease-out forwards;
+}
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+/* ============================================================
+   BASE STYLES
+   ============================================================ */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
