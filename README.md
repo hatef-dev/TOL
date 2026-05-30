@@ -6,6 +6,11 @@ A professional Next.js application built with React 19 and TypeScript, featuring
 
 This is a Next.js application (version 16) built with React 19 and TypeScript, focused on implementing a custom design system for UI components. The project features a comprehensive theming system with CSS variables for colors, typography, spacing, and border radius, including dark mode support. It follows an atomic design pattern with reusable components.
 
+## Demo
+![Banner](./public/topOrganicLeads.png)
+![Banner](./public/Tol.png)
+
+
 ## Features
 
 - **Custom Design System**: CSS variables for theming with light/dark mode support
